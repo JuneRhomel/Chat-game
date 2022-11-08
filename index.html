@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/21f9873db8.js" crossorigin="anonymous"></script>
+
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: rgb(31, 99, 158);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            ;
+        }
+
+        .user-profile {
+            width: 3em;
+            height: 3em;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .chat-box {
+            padding: 10px 1em;
+            background: rgba(255, 255, 255, 0.098);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.141);
+            width: 35em;
+            height: 40em;
+        }
+
+        i {
+            font-size: 1.3em;
+            color: blanchedalmond;
+        }
+
+        .icon-right {
+            display: flex;
+            gap: 2em;
+        }
+
+        .user-box {
+            margin-left: 4em;
+            text-align: center;
+            color: #fff;
+        }
+        .chat-user {
+            display: flex;
+            align-items: center;
+            margin-top: 2em;
+            gap: 2em;
+        }
+        .body-chat {
+            height: 100%;
+            gap: 1em;
+            overflow: auto;
+        }
+        .chat-message {
+            border: 2px solid rgba(255, 255, 255, 0.141);
+            padding: 1em 1em;
+            color: #fff;
+        }
+        .chat-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .text {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .send-btn {
+            background-color: rgb(31, 99, 158);
+            height: 100%;
+            width: 6em;
+        }
+        .user {
+            flex-direction: row-reverse;
+        }
+        #botMessage {
+            line-height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="chat-box">
+        <div class="head">
+            <div>
+                <i class="fa-solid fa-arrow-left"></i>
+            </div>
+            <div class="user-box">
+                <img class="user-profile"
+                    src="https://media.istockphoto.com/vectors/chat-bot-icon-vector-isolated-contour-symbol-illustration-vector-id1206829856?k=20&m=1206829856&s=170667a&w=0&h=e9Qo6SbtP-w4AhDF21EWt3aZASqL5we9Ics8BCB7aIE=" alt="">
+                <p>Bot-Bot</p>
+            </div>
+            <div class="icon-right">
+                <i class="fa-solid fa-phone"></i>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+        </div>
+
+        <div class="body-chat" id="bodyChat">
+            <div class="bot chat-user">
+                <img class="user-profile" src="https://media.istockphoto.com/vectors/chat-bot-icon-vector-isolated-contour-symbol-illustration-vector-id1206829856?k=20&m=1206829856&s=170667a&w=0&h=e9Qo6SbtP-w4AhDF21EWt3aZASqL5we9Ics8BCB7aIE=" alt="">
+                <div class="chat-message">
+                    <p id ="botMessage">Hi! Im Bot-Bot. <br> Want To Play A Game With Me? Yes/No</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text">
+            <textarea name="bot-message-text" id="inputMessage" cols="60" rows="3"></textarea>
+            <button onclick="send()" class="send-btn">
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    
+
+    <script src="/js/index.js"></script>
+</body>
+
+</html>
